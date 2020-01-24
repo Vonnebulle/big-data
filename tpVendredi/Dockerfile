@@ -12,3 +12,7 @@ EXPOSE 8888
 RUN /bin/bash -c "source big-datas/bin/activate"
 RUN pip3 install -r requirements.txt
 CMD [ "jupyter", "notebook", "--port=8888", "--ip=0.0.0.0", "--allow-root"]
+
+#commandes docker:
+#sudo docker build -t ubuntu-python .
+#sudo docker run -it -p 8888:8888 ubuntu-python
