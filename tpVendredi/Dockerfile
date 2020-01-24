@@ -2,6 +2,9 @@ FROM ubuntu
 RUN mkdir ./app
 COPY . ./app
 WORKDIR ./app/
+RUN git config --global user.name Vonnebulle \
+ git config --global user.email nathan@laury.org \
+ git clone https://github.com/Vonnebulle/big-data.git
 RUN apt update
 RUN apt install python3 python3-pip git virtualenv -y
 RUN virtualenv -p python3 big-datas
